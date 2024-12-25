@@ -1,0 +1,16 @@
+The `@apply` directive is not designed to handle pseudo-selectors directly.  To apply styles conditionally, you should apply the classes directly to the element using the appropriate pseudo-selector in your CSS or JavaScript. This ensures that the styles are applied correctly only when the condition is met.
+
+```css
+/* bugSolution.css */
+.button {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+.button:hover {
+  @apply bg-blue-700;
+}
+
+.button:focus {
+  @apply outline-none ring-2 ring-blue-500;
+}
+```
